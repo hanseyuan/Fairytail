@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>轮播</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style type="text/css">
+	#banner{
+		width:1200px;
+		height:384px;
+		overFlow:hidden;
+		position:relative;
+	}
+	/*轮播图*/
+	#list{
+		width:7200px;
+		height:384px;
+		position:absolute;
+		z-index:1;
+	}
+	#list>img{
+		width:1200px;
+		float: left;
+	}
+	/*圆点*/
+	#buttons{
+		 position: absolute; 
+		 bottom: 20px;
+		 left: 40%;
+		 z-index: 2;
+	}
+	#buttons li { 
+		cursor: pointer; 
+		float: left;
+		width:40px;
+		height:5px;
+		background: #fff;
+        margin-right:20px; 
+	}
+	#buttons .on { 
+		background:#e91e63;
+	}
+	#buttons li:hover{
+		background:#e91e63;
+	} 
+	/*左右按钮*/
+	 #banner:hover .arrow { display: block;}
+	.arrow{
+		 cursor: pointer; 
+		 display: none;
+		 position:absolute;
+		 top:150px;
+		 z-index: 2;
+		 width:35px;
+		 height:60px;
+		 border-radius:10px;
+		 background-color: RGBA(0,0,0,.2);
+	}
+	.arrow>img{
+		 position: absolute; 
+		 top:12px;
+		 left:0px;
+	}
+	#prev { left: 10px;}
+    #next { right: 10px;}
+	.arrow:hover { 
+		background-color: RGBA(0,0,0,.5);
+	}
+  </style>
+   <script src="js/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+	window.onload = function () {
+		var banner=$("#banner");
+		var list=$("#list");
+		var buttons=$("#buttons>li");
+		var prev = $('#prev');
+        var next = $('#next');
+		var index = 1;   //当前显示图序号
+		var len = 4;
+		var animated = false;
+		var interval = 3000;
+		var timer;
+		/*小圆点*/
+		
+		$("#buttons").on("click","li",function(){
+			//如果点击当前,则不执行
+			if($(this).hasClass("on")){
+				return;
+			}
+			var myIndex=$(this).attr("index");
+			var offset=-1200*(myIndex-index);
+			index=myIndex;
+			showButton();
+			if (animated==false) {
+				animate(offset);
+             }
+			
+		})
+
+		 function showButton() {
+			var i=parseInt(index-1);
+			$("#buttons>li").eq(i).addClass("on").siblings().removeClass("on");
+		 }
+		/*切换图片*/
+		function animate (offset) {	
+			animated = true;
+			var newLeft=parseInt($("#list").css("left"))+offset;
+			var  time=300;//位移总时间
+			var inteval=10;//位移间隔时间
+			var speed=offset/(time/inteval);//每次位移量
+			
+			function go(){
+				if ( 
+					(speed > 0 && parseInt($("#list").css("left"))< newLeft) 
+					|| 
+					(speed < 0 && parseInt($("#list").css("left"))> newLeft)
+					
+					) {
+                     var nowSpeed=parseInt($("#list").css("left"))+speed;
+					 $("#list").css("left",nowSpeed);
+                     setTimeout(go, inteval);
+                 }else{
+					  animated = false;
+					$("#list").css("left",newLeft);
+					if(newLeft>-1200){
+						$("#list").css("left","-4800px");
+					}
+					if(newLeft<-4800){
+						$("#list").css("left","-1200px");
+					}
+				 
+				 }
+
+
+			}
+			go();
+
+
+
+		}
+
+		/*定时器*/
+		 function play() {
+                timer = setTimeout(function () {
+                    $('#next').click();
+                    play();
+                }, interval);
+          }
+          function stop() {
+                clearTimeout(timer);
+          }
+		/**下一页***/
+		$('#next').on("click",function(e){
+			e.preventDefault();
+			if (index == 4) {
+                    index = 1;
+                }
+                else {
+                    index += 1;
+                }
+			showButton();
+			if (animated==false) {
+                  animate(-1200);
+             }
+			
+		})
+		/**上一张**/
+		$('#prev').on("click",function(e){
+			e.preventDefault();
+			if (index == 4) {
+                    index = 1;
+                }
+                else {
+                    index -= 1;
+                }
+			showButton();
+			if (animated==false) {
+                  animate(1200);
+             }
+		})
+
+		//container.onmouseover = stop;
+        //container.onmouseout = play;
+
+        play();
+
+
+	}
+  </script>
+ </head>
+ <body>
+	<div id="banner">
+		<div id="list" style="left: -1200px;">
+			<img src="img/index/banner4.jpg" alt="1"/>
+			<img src="img/index/banner1.jpg" alt="1"/>
+			<img src="img/index/banner2.jpg" alt="2"/>
+			<img src="img/index/banner3.jpg" alt="3"/>
+			<img src="img/index/banner4.jpg" alt="4"/>>
+			<img src="img/index/banner1.jpg" alt="4"/>
+		</div>
+		<a href="javascript:;" id="prev" class="arrow">
+			<img src="img/index/ico_zuo.png">
+		</a>
+		<a href="javascript:;" id="next" class="arrow">
+			<img src="img/index/ico_you.png">
+		</a>
+		<ul id="buttons">
+			<li index="1" class="on"></li>
+			<li index="2"></li>
+			<li index="3"></li>
+			<li index="4"></li>
+		</li>
+    </div>
+ </body>
+</html>

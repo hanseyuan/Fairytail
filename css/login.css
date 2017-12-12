@@ -1,0 +1,208 @@
+#header{
+	margin:10px 0  10px;
+}
+#header span{
+	font-size:23px;
+	position:relative;
+	top:0px;
+	left:-13px;
+}
+#load{
+	width:1200px;
+	height:500px;
+	border:1px solid red;
+	background-image:url(../img/login/background.jpg);
+}
+#load>form{
+	width:340px;
+	height:340px;
+	box-sizing:border-box;
+	border:1px solid red;
+	float:right;
+	position:relative;
+	top:50px;
+	right:100px;
+	font-family: Arial,simsun;
+	padding:20px;
+	background:#fff;
+}
+.tabs>li{
+	display:inline-block;
+	border-bottom:1px solid #ccc;
+}
+.tabs>li>a{
+	width:145px;
+	display:inline-block;
+	font-size:20px;
+	text-align:center;
+	padding-bottom:10px;
+}
+.tabs>.active{
+      border-bottom:1px solid #ff0000;
+}
+.container{
+	position: relative;
+}
+.container>div{
+  width: 300px;
+  height: 230px;
+  background:#fff;
+  border-top:0;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+.container>.active{
+  z-index:10;
+}
+
+#content1{
+	text-align:center;
+}
+#content1>img{
+	width:180px;
+	position:relative;
+	top:0px;
+}
+#content1>div{
+	width:300px;
+	text-align:center;
+}
+#content1>div>p{
+	color: rgb(94, 94, 94);
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+}
+#content2>div{
+	width:300px;
+	min-height:40px;
+	line-height:40px;
+}
+#content2>div>input{
+	width:300px;
+	height:40px;
+	line-height:40px;
+	box-sizing:border-box;
+	border: 1px solid #CCC;
+    font-family: Arial,simsun;
+    outline:none;
+	padding-left:10px;
+    color: #333;
+    font-size: 14px;
+}
+.help{
+	width:300px;
+	height:30px;
+	line-height:30px;
+	box-sizing:border-box;
+	padding-left:10px;
+	color:red;
+	display:block;
+}
+.false{
+	display:none;
+}
+
+.remember{
+	width:300px;
+	height:30px !important;
+	line-height:30px !important;
+}
+.remember>span:first-child{
+	color: #5e5e5e;
+}
+.remember>span:first-child>input{
+	position:relative;
+	top:3px;
+}
+.remember>span:last-child{
+	float:right;
+	margin-right:5px;
+}
+.remember>span:last-child>a{
+	color: #069;
+}
+.remember>span:last-child>a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+#submit{
+    display: block;
+    width: 290px;
+    background: #ff5757;
+    font-size:20px !important;
+    color: #fff !important;
+    text-align: center;
+    border: 0 none;
+    outline: 0;
+    word-spacing: 3px;
+    cursor: pointer;
+
+}
+
+
+
+/*3 µ×²¿*/
+#footer-bottom{
+    width:1200px;
+    margin:0 auto;
+    padding: 30px 0;
+    border-top: 1px solid #dd00a7;
+}
+#footer-bottom>p{
+    display: block;
+    text-align: center;
+    color: #a5a5a5;
+}
+#footer-bottom>p:last-child{
+    padding: 15px;
+}
+#footer-bottom a{
+    color: #a5a5a5;
+    display:inline-block;
+    height: 20px;
+    line-height: 20px;
+}
+#footer-bottom a:hover{
+    color: #a5a5a5;
+}
+
+/********µ¯¿ò******/
+#jumpbox{
+	position:fixed;
+	display:none;
+	top:0;
+    z-index:1000;
+	width:1200px;
+	height:750px;
+	background:rgba(255,255,255,0.4);
+}
+#jump{
+	width:300px;
+	height:200px;
+	box-sizing:border-box;
+	background:rgba(255,255,255,0.8);
+	margin:0 auto;
+	margin-top:270px ;
+	text-align:center;
+	border-radius:10px;
+	border:1px solid #ccc;
+}
+#jump>div:first-child{
+	font-size:18px;
+	height:40px;
+	line-height:40px;
+	background:#eee;
+}
+#msg{
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	margin:40px 0 30px;
+}
+#yes{
+	width:50px;
+	height:30px;
+}

@@ -1,0 +1,75 @@
+/*1上部*/
+#foot{
+	margin-top:50px;
+}
+#footer-top>ul{
+    display:flex;
+    justify-content: space-between;
+    background: #F8F8F8;
+    padding: 15px 0;
+}
+#footer-top>ul>li{
+    display:flex;
+    height: 50px;
+    padding: 0px 50px;
+}
+#footer-top>ul>li>a{
+    display:block;
+}
+#footer-top>ul>li>a:hover{
+    color:#f5004b;;
+}
+#footer-top>ul a.title{
+    font: 700 18px Arial,"Microsoft YaHei";
+    color: #404040;
+    padding: 10px 20px 15px 15px;
+}
+#footer-top>ul a.sec-title{
+    font:400 18px Arial,"Microsoft YaHei";
+    color: #404040;
+    padding: 10px 0px;
+}
+/*2 中部*/
+#footer-middle{
+    display:flex;
+    justify-content: space-between;
+    padding:15px 50px
+}
+#footer-middle>ul>li{
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+#footer-middle>ul>li:first-child{
+    font-size: 16px;
+    color: #5e5e5e;
+    height: 30px;
+    line-height: 30px;
+}
+/*3 底部*/
+#footer-bottom{
+    width:1200px;
+    margin:0 auto;
+    padding: 30px 0;
+    border-top: 1px solid #dd00a7;
+}
+#footer-bottom>p{
+    display: block;
+    text-align: center;
+    color: #a5a5a5;
+}
+#footer-bottom>p:last-child{
+    padding: 15px;
+}
+#footer-bottom a{
+    color: #a5a5a5;
+    display:inline-block;
+    height: 20px;
+    line-height: 20px;
+}
+#footer-bottom a:hover{
+    color: #a5a5a5;
+}

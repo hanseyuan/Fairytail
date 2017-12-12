@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>header</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+</head>
+<body>
+    <div class="main">
+        <div id="header-top">
+            <ul id="listLeft">
+                <li><a href="index.html"><img src="img/header/host.png"/>妖尾官网</a></li>
+                <li><a href="#"><img src="img/header/qiye.png"/>企业风采</a></li>
+                <li id="service" class="dropdown">
+                    <a href="#">
+                        <img src="img/header/kefu.png"/>帮助中心
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#">帮助服务</a></li>
+                        <li><a href="#">购物帮助</a></li>
+                        <li><a href="#">在线客服</a></li>
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+					<a href="#">
+						<img src="img/header/phone.png" />手机妖尾
+					</a>
+					<div class="dropdown-menu">
+						<img src="img/header/code.png" alt="二维码">
+					</div>
+				</li>
+            </ul>
+            <!-- <ul>
+                <li><a href="#">请登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">购物车</a></li>
+            </ul> -->
+			<!-- 未登录时的列表 -->
+			<ul id="listLogin">
+				<li><a href="login.html">登录</a></li>
+                <li class="register"><a href="register.html">注册有礼<img src="img/header/gift.png" /></a></li>
+			</ul>
+			<!-- 登录后的列表 -->
+			<ul  id="listWelcome">
+				<li  class="dropdown">
+					<a href="myadmin.html">妖精会员</a>
+					<ul  class="dropdown-menu  selfcenter">
+						<li>
+							<img src="img/avatar/default.png" id="avatar"/>
+							<span> 欢迎光临</span> <a id="uname" href="myadmin.html">dinging</a>
+						</li>
+						<li>
+							我的特权
+						</li>
+					    <li>
+							<ul id="myPower">
+								<li>
+									<a href="#">
+										<img src="img/header/pan.png">
+										<p>每日抽奖</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/header/huan.png">
+										<p>退换货保证</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/header/jia.png">
+										<p>退换货保证</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				
+				<!-- <li class="user">
+                    <a href="myadmin.html">
+                        <img src="img/avatar/default.png" id="avatar"/>
+                        <span>你好</span>
+                        <span id="uname">     </span>
+                    </a>
+                </li> -->
+                <li><a href="#" id="btnLogout" >注销</a></li>
+                <li><a href="myadmin.html">我的订单</a></li>
+                <li><a href="cart.html">购物车</a></li>
+			</ul>
+        </div>
+        <div id="header-bottom">
+            <!-- 1、左侧 ：LOGO -->
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/header/logo.png" alt="">
+                </a>
+            </div>
+            <!-- 2、中间输入框-->
+            <div id="top-input" class="dropdown">
+				<div>
+                <input type="text" id="txtSearch" placeholder="品质好货等你来">
+                <img src="img/header/mike.png" alt=""/>
+                <a id="search" href="#" class="search-img" data-trigger="search">搜索</a>
+				</div>
+				<ul  class="dropdown-menu  expand autocomplete" style="display:block">
+					<!-- <li>oppo</li> -->
+					<!-- <li>vivo</li> -->
+					<!-- <li>huawei</li> -->
+					<!-- <li>apple</li> -->
+					<!-- <li>oppo</li> -->
+				</ul>
+            </div>
+            <!--3右-->
+            <div id="trans">
+                <img src="img/header/bian.gif" alt="">
+            </div>
+        </div>
+		<!--2.主导航栏-->
+        <div id="navigate">
+            <ul>
+                <li  class="dropdown">
+					<a>全部商品分类</a>
+					<ul class="dropdown-menu" id="loadingSearch">
+                        <li><a href="#">华为</a></li>
+                        <li><a href="#" >三星</a></li>
+                        <li><a href="#" >OPPO</a></li>
+                        <li><a href="#">小米</a></li>
+						<li><a href="#">Apple</a></li>
+                        <li><a href="#">VIVO</a></li>
+                        <li><a href="#">Honor</a></li>
+						<li><a href="#">魅族</a></li>
+						<li><a href="#">锤子</a></li>
+						<li><a href="#">美图</a></li>
+                    </ul>
+				
+				<li><a href="index.html">首页</a></li>
+                <li><a href="lookforword.html">圈子</a></li>
+                <li><a href="lookforword.html">真划算</a></li>
+                <li><a href="lookforword.html">超市</a></li>
+                <li><a href="lookforword.html">服装城</a></li>
+                <li><a href="lookforword.html">金融</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

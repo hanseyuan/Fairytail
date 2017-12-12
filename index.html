@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+	<link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <div class="main">
+        <!--1、页面头部-->
+        <header id="header">
+            <img src="img/loading.gif" alt="加载中..." >
+        </header>
+        <!--2、banner部分-->
+        <div id="banner">
+            <!-- 图片区域 -->
+            <ul id="banner-img" class="banner-img"
+                style="transition:all .3s linear;" data-load="bannerImgs">
+                <!--
+                  <li>
+                    <a href="${p.href}" title="${p.title}">
+                      <img src="${p.img}">
+                    </a>
+                  </li>
+                  -->
+                <li style="left:50%;">
+                    <img src="img/loading.gif">
+                </li>
+                <!--
+                   <li>
+                         <a href="#" title="">
+                             <img src="img/index/banner1.jpg">
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#" title="">
+                             <img src="img/index/banner2.jpg">
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#" title="">
+                             <img src="img/index/banner3.jpg">
+                         </a>
+                     </li>
+                     -->
+            </ul>
+            <!--左右方向按钮-->
+            <a id="ck-left" class="ck-slide ck-left" data-move="left"></a>
+			<a id="ck-right" class="ck-slide ck-right" data-move="right"></a>
+            <!--导航小圆点-->
+            <ul id="indicators"  class="indicators" data-load="bannerInds">
+                <!-- <li></li> -->
+            </ul>
+        </div>
+        <!--3、推荐机型-->
+        <!--<ul class="recommend" >
+            <li>
+                <a href="#" title="">
+                    <img src="img/index/recommend1.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="img/index/recommend2.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="img/index/recommend3.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#" title="">
+                    <img src="img/index/recommend4.jpg">
+                </a>
+            </li>
+        </ul>-->
+        <!--4 秒杀专区-->
+        <div class="seckill">
+            <div class="time">
+                <ul>
+                    <li>
+                        <img src="img/index/time.png" alt=""/>
+                        <span>每日秒杀</span>
+                        <span>总有你想不到的低价</span>
+                    </li>
+                    <li>
+                        <span>当前场次剩余时间</span>
+                        <span id="hour">00</span>:<span id="minutes">42</span>:<span id="second">34</span>
+                    </li>
+                </ul>
+            </div>
+           <ul class="seckill_product" id="seckill_product">
+               <!-- 
+			   <li>
+                   <a href="p.href">
+                       <img src="${p.pic}" alt=""/>
+                       <p>${p.title}</p>
+                       <p>${p.price} <span>${p.old_price}</span></p>
+                   </a> 
+               </li>-->
+               <!-- <li>
+					<a href="">
+                       <img src="img/product/md/GalaxyS8(G9500)1.jpg " alt=""/>
+                       <p>三星(SAMSUNG) Galaxy S8(G9500) 全网通 手机 雾屿蓝 4G手机</p>
+                       <p>¥5688.00  <span>¥5888.00</span></p>
+                   </a>
+			   </li>
+               <li></li>
+               <li></li>
+               <li></li>
+			   <li></li> -->
+           </ul>
+        </div>
+        <!--5 楼层1 华为直供-->
+        <div class="floor" id="f1">
+            <div class="floor-top">
+                <img src="img/index/1F.png"/>
+                <img src="img/index/HUAWEI.jpg" alt=""/>/1F
+                <span>
+                    <span>7*24小时</span>
+                    <span>正品保障</span>
+                </span>
+            </div>
+            <div id="f1-content" class="floor-content">
+                <div class="content_top">
+						<a href="#">
+							<img src="img/index/huawei.webp" alt=""/>
+						</a>
+						<div  class="attention">
+							<p>华为</p>
+							<a><span>❤ </span>关注</a>
+						</div>
+					</div>
+					<div class="content_top">
+						<a href="#">
+							<img src="img/index/huaweiMate10.jpg" alt=""/>
+						</a> 
+					</div>
+				<div class="content_bottom"> 
+					 <a href="#">
+                            <img src="img/product/md/HUAWEIMate10(ALP-AL00)black1.jpg" alt=""/>
+                            <p>HUAWEI Mate10</p>
+                            <p>6期免息送10豪礼，麒麟960芯片</p>
+                     </a>
+                     <div>
+                            <span>¥5888.00</span>
+                            <span>已售: <span>1211</span>台</span>
+                     </div>
+				</div>
+				
+            </div>
+        </div>
+		<!--6楼层2 三星专区 -->
+		<div class="floor" id="f2">
+            <div class="floor-top">
+                <img src="img/index/1F.png"/>
+                <img src="img/index/SAMSUNG.jpg" alt=""/>/2F
+                <span>
+                    <span>三星Note8 新品上市</span>
+                </span>
+                <a href="#"><img src="img/index/dui.png" alt=""/>正品保障 全国联保 无忧退换货</a>
+            </div>
+            <div id="f2-content" class="floor-content"></div>
+		</div>
+		<!--7楼层3 OPPO楼层 -->
+		<div class="floor" id="f3">
+            <div class="floor-top">
+                <img src="img/index/1F.png"/>
+                <img src="img/index/OPPO.jpg" alt=""/>/3F
+                <a href="#"><img src="img/index/dui.png" alt=""/>正品保障 全国联保 无忧退换货 顺丰包邮</a>
+            </div>
+            <div id="f3-content" class="floor-content"></div>
+		</div>
+
+		<!-- 9楼层滚动 -->
+		<div id="lift">
+            <div class="navigate">楼层导航</div>
+			<ul class="lift_list">
+				<li class="lift_item1">
+					<a href="javascript:;" class="lift_btn">
+						<span class="lift_btn_txt">1F 华为专区</span>
+					</a>
+				</li>
+				<li class="lift_item1">
+					<a href="javascript:;" class="lift_btn">
+						<span class="lift_btn_txt">2F 三星专区</span>
+					</a>
+				</li>
+				<li class="lift_item1">
+					<a href="javascript:;" class="lift_btn">
+						<span class="lift_btn_txt">3F OPPO专区</span>
+					</a>
+				</li>
+			</ul>
+            <div class="gotop">返回顶部</div>
+		</div>
+		<!--10、页面最底部-->
+		<footer id="footer">
+		  <img src="img/loading.gif" class="loading">
+		</footer>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/index.js"></script>
+	<script src="js/footer.js"></script>
+</body>
+</html>

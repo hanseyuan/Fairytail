@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>产品列表</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/footer.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="Sliding Image Panels with CSS3" />
+	<meta name="keywords" content="sliding, background-image, css3, panel, images, slider" />
+	<meta name="author" content="Codrops" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/sliding.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/sliding1.css" />
+ </head>
+ <body>
+	<div class="main">
+		<!--1、页面头部-->
+        <header id="header">
+            <img src="img/loading.gif" alt="加载中..." >
+        </header>
+		<!--2多条件查询  -->
+		<div id="select">
+			<img src="img/loading.gif" alt="加载中...">
+		</div>
+		<!-- 3 产品列表 -->
+		<div id="product-list">
+			<!-- 3.1 左 推荐	 -->
+			<div id="recommend">
+				<p><img src="img/product/jian.png">店家主推</p>
+				<ul id="recommend-products">
+					<li>
+						<a href="#">
+							<img src="img/product/tuijian.png" alt="">
+							<img src="img/product/md/OPPOR11red1.jpg" alt="">
+						</a>
+						<a href="">
+							OPPO R11 6GB+128GB 全网通 4G手机 双卡双待手机 红色
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 3.2 右 产品列表 -->
+			<div id="product-tt">
+				<!-- 3.2.1 导航 -->
+				<div id="filter-box">
+					<div class="filter-top">
+						<ul class="filter-left">
+							<li class="on"><a href="#" class="on">综合</a></li>
+							<li><a href="#">销量</a></li>
+							<li><a href="#">新品</a></li>
+							<li><a href="#">评价</a></li>
+							<li><a href="#">价格</a></li>
+						</ul>
+						<ul class="filter-center">
+							<li>
+								<input type="text"  name="low" placeholder="¥"/>
+							</li>
+							<li>-</li>
+							<li>
+								<input type="text"  name="low" placeholder="¥"/>
+							</li>
+						</ul>
+						<ul class="filter-right">
+							<li>
+								<input type="text"  name="low" placeholder="在结果中搜索"/>
+							</li>
+							<li>
+								<a href="#">确定</a>
+							</li>
+						</ul>
+					</div>
+					<div class="filter-bottom">
+						<span>送至:</span>
+						<select name="#" id="address">
+							<option value="1">西安市碑林区长安大街</option>
+						</select>
+						<input type="checkbox"><span>妖精自营</span>
+						<input type="checkbox"><span>仅显示有货</span>
+						<input type="checkbox"><span>真划算</span>
+						<input type="checkbox"><span>返利</span>
+					</div>
+				</div>
+				<!-- 3.2.1产品 -->
+				<ul id="product">
+					<!-- <li> -->
+						<!-- <a href="#" class="pic"> -->
+							<!-- <img src="img/product/md/OPPOR11red1.jpg" alt=""/> -->
+							<!-- <p> -->
+								<!-- <span>找相似</span><span>找同款</span> -->
+							<!-- </p> -->
+						<!-- </a> -->
+						<!-- <P class="price">¥2599.00</P> -->
+						<!-- <a href="#" class="title">OPPO R11 6GB+128GB 全网通 4G手机 双卡双待手机 红色</a> -->
+						<!-- <div class="assess"><img src="img/product/message.png" />已有<span>17761</span>人评价</div> -->
+						<!-- <div class="self"> -->
+							<!-- <img src="img/product/self.png"/> -->
+							<!-- <img src="img/product/hot.png"/> -->
+						<!-- </div> -->
+					<!-- </li> -->
+					<!-- <li></li> -->
+					<!-- <li></li> -->
+					<!-- <li></li> -->
+					<!-- <li></li> 
+
+					<div class="nosearch">
+						<img src="img/product/nosearch.png" >
+						<h1>商品未上架！</h1>
+					</div>
+					
+					-->
+				</ul>
+				<!-- 3.3.3页码 -->
+				<div id="page">
+					<a href="#" class="previous disabled">上一页</a>
+					<a href="#" class="selected">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+          			<a href="#" class="next">下一页</a> 
+				</div>
+			</div>
+		
+		</div>
+		
+
+
+
+		 <!--3 页面底部-->
+        <footer id="footer">
+            <img src="img/loading.gif" class="loading">
+        </footer>
+	</div>
+	<script src="js/ajax.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/footer.js"></script>
+ </body>
+</html>

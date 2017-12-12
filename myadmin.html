@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会员中心</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/myadmin.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <div class="main">
+        <!--1、页面头部-->
+        <header id="header">
+			<!-- header -->
+			<div id="header-top">
+				<ul id="listLeft">
+					<li><a href="index.html"><img src="img/header/host.png"/>妖尾官网</a></li>
+					<li><a href="#"><img src="img/header/qiye.png"/>企业风采</a></li>
+					<li id="service" class="dropdown">
+						<a href="#">
+							<img src="img/header/kefu.png"/>帮助中心
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">售后服务</a></li>
+							<li><a href="#">帮助服务</a></li>
+							<li><a href="#">购物帮助</a></li>
+							<li><a href="#">在线客服</a></li>
+						</ul>
+
+					</li>
+					<li class="dropdown">
+						<a href="#">
+							<img src="img/header/phone.png" />手机妖尾
+						</a>
+						<div class="dropdown-menu">
+							<img src="img/header/code.png" alt="二维码">
+						</div>
+					</li>
+				</ul>
+				<!-- 未登录时的列表 -->
+				<ul id="listLogin">
+					<li><a href="login.html">登录</a></li>
+					<li class="register"><a href="register.html">注册有礼<img src="img/header/gift.png" /></a></li>
+				</ul>
+				<!-- 登录后的列表 -->
+				<ul  id="listWelcome">
+					<li  class="dropdown">
+						<a href="myadmin.html">妖精会员</a>
+						<ul  class="dropdown-menu  selfcenter">
+							<li>
+								<img src="img/avatar/default.png" id="avatar"/>
+								<span> 欢迎光临</span> <a id="uname" href="myadmin.html">dinging</a>
+							</li>
+							<li>
+								我的特权
+							</li>
+							<li>
+								<ul id="myPower">
+									<li>
+										<a href="#">
+											<img src="img/header/pan.png">
+											<p>每日抽奖</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/header/huan.png">
+											<p>退换货保证</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="img/header/jia.png">
+											<p>退换货保证</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#" id="btnLogout" >注销</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li><a href="cart.html">购物车</a></li>
+				</ul>
+			</div>
+
+			<!-- 2-->
+            <div>
+                <a href="index.html">
+                    <img src="img/header/logo.png">
+                </a>
+                <span>会员中心</span>
+            </div>
+        </header>
+        <div class="center">
+            <div class="affix" data-trigger="accordion">
+                <ul>
+                    <li class="title"><a data-toggle="item" href="#account-management">账户管理</a></li>
+                    <li class="content fade in">
+                        <ul>
+                            <li>我的信息</li>
+                            <li>个人头像</li>
+                            <li>安全管理</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title"><a  data-toggle="item" href="#my-order"  id="myOrderList">我的订单</a></li>
+                    <li class="content fade">
+                        <ul>
+                            <li>全部订单</li>
+                            <li>待付款</li>
+                            <li>待收货</li>
+                            <li>待评价</li>
+                            <li>退货退款</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title"><a data-toggle="item" href="#address-management">地址管理</a></li>
+                    <li class="content fade">
+                        <ul>
+                            <li>我的地址</li>
+                            <li>新增地址</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title"><a data-toggle="item" href="#my-coupon">我的优惠</a></li>
+                    <li class="content fade">
+                        <ul>
+                            <li>抵用券</li>
+                            <li>红包</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div id="account-management" class="box active" style="background:#efe">
+                    <ul class="tabs">
+                        <li class="active"><a data-toggle="tab" href="#content1">我的信息</a></li><li><a data-toggle="tab" href="#content2">个人头像</a></li><li><a data-toggle="tab" href="#content3">安全管理</a></li>
+                    </ul>
+                    <div class="detail">
+                        <div id="content1" class="active">
+                             <form action="#"  id="form1">
+                                <div>
+                                    <label for="avatar">用户头像:</label>
+                                    <img id="avatar" src="img/myadmin/avatar.png" alt=""/>
+                                </div>
+                                <div>
+                                    <label for="txtName">用户名:</label>
+                                    <span id="txtName">dingding</span>
+                                    <!--<input type="text" name="uname" id="txtName">-->
+                                    <span id="msgName"></span>
+                                </div>
+                                <div>
+                                    <label >性别:</label>
+                                    <input type="radio" name="gender"  value="0" checked><b>男</b>
+                                    <input type="radio" name="gender" value="1"><b>女</b>
+                                    <span id="msgGander"></span>
+                                </div>
+                                <div>
+                                    <label for="phone">手机号码:</label>
+                                    <!-- <span id="phone">13597852544</span> -->
+                                    <input type="text" name="phone" id="phone">
+                                    <span id="msgPhone"></span>
+                                </div>
+                                <div>
+                                    <label for="email">邮箱:</label>
+                                    <input type="text" name="email" id="email">
+                                    <span id="msgEmail"></span>
+                                </div>
+                                <div>
+                                    <button id="update-myself">保存修改</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <div id="content2">
+                            <!-- <form action="data/myadmin/upload_avatar.php" method="post" enctype="multipart/form-data"> -->
+							<form id="form3">
+                                <!-- <div>
+                                    <label for="file">用户头像:</label><br>
+                                    <!-- <img  src="img/myadmin/avatar.png" alt=""/> 
+                                    <input id="file" type="file"  name="mypic"/>
+
+									<label>预览:</label>
+									<br>
+									<div class="preview">
+										<img src="" id="img0" width="120" >
+									</div>
+									<input id="uploads" type="button" value="上传"/>
+                                </div> -->
+                                <div>
+                                    <label for="file">用户头像:</label>
+                                    <input id="file" type="file"  name="mypic"/><br>
+								</div>
+								<div>
+									<label>预览:</label>
+									<div class="preview">
+										<img src="" id="img0">
+									</div>
+								</div>
+								<div>
+									<button id="uploads" >确认上传</button> 
+                                </div>
+                            </form>
+                        </div>
+                        <div id="content3">
+                            <form action="#"  id="form2">
+                                <div>
+                                    <label for="upwd">原始密码:</label>
+                                    <input type="password" name="upwd" id="upwd">
+                                    <span id="msgUpwd"></span>
+                                </div>
+                                <div>
+                                    <label for="nupwd">设置新密码:</label>
+                                    <input type="password" name="nupwd" id="nupwd">
+                                    <span id="msgNupwd"></span>
+                                </div>
+                                <div>
+                                    <label for="tupwd">确认密码:</label>
+                                    <input type="password" name="tupwd" id="tupwd">
+                                    <span id="msgTupwd"></span>
+                                </div>
+                                <div>
+                                    <button id="update-upwd">保存修改</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="my-order" class="box" style="background:#fee">
+					<ul class="tabs" style="background:#fee">
+                        <li class="active"><a data-toggle="tab" href="#content21">全部订单</a></li><li><a data-toggle="tab" href="#content22">待付款</a></li><li><a data-toggle="tab" href="#content23">待收货</a></li><li><a data-toggle="tab" href="#content24">待评价</a></li><li><a data-toggle="tab" href="#content25">退货退款</a></li>
+                    </ul>
+					 <div class="detail"  id="mylist">
+						<div id="content21" class="active">
+							<table>
+								<thead>
+									<tr>
+										<th>订单编号</th>
+										<th>宝贝</th>
+										<th>单价</th>
+										<th>数量</th>
+										<th>商品操作</th>
+										<th>实付款</th>
+										<th>交易状态</th>
+										<th>交易操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody21">
+									<tr>
+										<td>22636656</td>
+										<td class="good">
+											<img src="img/product/md/OPPOA59s1.jpg"/>
+											<ul>
+												 <li>
+													<p>OPPO A59s 4GB+32GB 全网通 4G手机 双卡双待手机 金色</p>
+												 </li>
+												 <li>版本: <span>OPPO A59s</span></li>
+												 <li>机身内存: <span>4GB+32GB</span></li>
+												 <li>颜色: <span>金色</span></li>	
+											</ul>
+										</td>
+										<td>¥1799.00</td>
+										<td>1</td>
+										<td>
+											<a href="#">退货</a>
+										</td>
+										<td>¥1799.00</td>
+										<td>正在派送</td>
+										<td>
+											<a href="#">确认收货</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 页码 -->
+						
+						</div>
+						<div id="content22">
+							<table>
+								<thead>
+									<tr>
+										<th>订单编号</th>
+										<th>宝贝</th>
+										<th>单价</th>
+										<th>数量</th>
+										<th>商品操作</th>
+										<th>实付款</th>
+										<th>交易状态</th>
+										<th>交易操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody22">
+									<tr>
+									</tr>
+								</tbody>
+							
+							</table>
+							<!-- <div class="noSearch"> -->
+								<!-- <img src="img/myadmin/search.png"> -->
+								<!-- <span>未找到符合条件订单</span> -->
+							<!-- </div> -->
+						</div>
+						<div id="content23">
+							<table>
+								<thead>
+									<tr>
+										<th>订单编号</th>
+										<th>宝贝</th>
+										<th>单价</th>
+										<th>数量</th>
+										<th>商品操作</th>
+										<th>实付款</th>
+										<th>交易状态</th>
+										<th>交易操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody23">
+									<tr>
+										<td>22636656</td>
+										<td class="good">
+											<img src="img/product/md/OPPOA59s1.jpg"/>
+											<ul>
+												 <li>
+													<p>OPPO A59s 4GB+32GB 全网通 4G手机 双卡双待手机 金色</p>
+												 </li>
+												 <li>版本: <span>OPPO A59s</span></li>
+												 <li>机身内存: <span>4GB+32GB</span></li>
+												 <li>颜色: <span>金色</span></li>	
+											</ul>
+										</td>
+										<td>¥1799.00</td>
+										<td>1</td>
+										<td>
+											<a href="#">退货</a>
+										</td>
+										<td>¥1799.00</td>
+										<td>正在派送</td>
+										<td>
+											<a href="#">确认收货</a>
+										</td>
+									</tr>
+								</tbody>
+								
+							</table>
+						</div>
+						<div id="content24">
+							<table>
+								<thead>
+									<tr>
+										<th>订单编号</th>
+										<th>宝贝</th>
+										<th>单价</th>
+										<th>数量</th>
+										<th>商品操作</th>
+										<th>实付款</th>
+										<th>交易状态</th>
+										<th>交易操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody24">
+									<tr>
+									</tr>
+								</tbody>
+							
+							</table>
+							<!-- <div class="noSearch"> -->
+								<!-- <img src="img/myadmin/search.png"> -->
+								<!-- <span>未找到符合条件订单</span> -->
+							<!-- </div> -->
+						</div>
+						<div id="content25">
+							<table>
+								<thead>
+									<tr>
+										<th>订单编号</th>
+										<th>宝贝</th>
+										<th>单价</th>
+										<th>数量</th>
+										<th>商品操作</th>
+										<th>实付款</th>
+										<th>交易状态</th>
+										<th>交易操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody25">
+									<tr>
+									</tr>
+								</tbody>
+							</table>
+							
+							<!-- <div class="noSearch"> -->
+								<!-- <img src="img/myadmin/search.png"> -->
+								<!-- <span>未找到符合条件订单</span> -->
+							<!-- </div> -->
+						</div>
+					 </div>
+					 <div id="page" style="height:50px">
+					 </div>		
+				</div>
+                <div id="address-management" class="box" style="background:#eef">
+					<ul class="tabs" style="background:#eef">
+                        <li class="active"><a data-toggle="tab" href="#content31">我的地址</a></li><li><a data-toggle="tab" href="#content32">新增地址</a>
+                    </ul>
+					<div class="detail">
+						<div id="content31" class="active">
+							<table>
+								<thead>
+									<tr>
+										<th>编号</th>
+										<th>接收人姓名</th>
+										<th>省份</th>
+										<th>城市</th>
+										<th>区/县</th>
+										<th>详细地址</th>
+										<th>邮编</th>
+										<th>电话</th>
+										<th>设为默认地址</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody1">
+									<tr>
+										<td>01</td>
+										<td>张欢</td>
+										<td>陕西省</td>
+										<td>西安市</td>
+										<td>碑林区</td>
+										<td><span>长安大街3号陕西高速大厦</span></td>
+										<td>254214</td>
+										<td>13456871520</td>
+										<td>是</td>
+										<td>
+											<a href="#"  id="updataAddress">更新</a>
+											<a href="#" id="deleteAddress">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							
+							</table>
+						
+						
+						</div>
+						<div id="content32">
+							<div>
+								<ul>
+									<li id="china">
+										<label>所在地区：</label>
+										<select class="province cxselect" data-value="陕西省" data-first-title="选择省" disabled="disabled"></select>
+										<select class="city cxselect" data-value="西安市" data-first-title="选择市" disabled="disabled"></select>
+										<select class="area cxselect" data-value="碑林区" data-first-title="选择地区" disabled="disabled"></select>
+									</li>
+									<li>
+										<label>详细地址：</label>
+										<textarea name="address_detail" class="address_detail"></textarea>
+									</li>
+									<li>
+										<label>邮政编码：</label>
+										<input id="postcode" type="text"  value="">
+									</li>
+									<li>
+										<label>收 货 人：</label>
+										<input id="receiver" type="text"  value="">
+									</li>
+									<li>
+										<label>联系方式：</label>
+										<input id="cellphone" type="text"  value="">
+									</li>
+									<li class="default">
+										<label>	
+											<input type="checkbox">
+										</label>
+										<span>
+											设为默认地址	
+										</span>
+									</li>
+								</ul>
+								<div>
+									<button id="sureinput">确定</button>
+								</div>
+							</div>
+						
+						
+						</div>
+					</div>
+				</div>
+                <div id="my-coupon" class="box" style="background:#eef">
+					<ul class="tabs" style="background:#eef">
+                        <li class="active"><a data-toggle="tab" href="#content41">抵用券</a></li><li><a data-toggle="tab" href="#content42">红包</a>
+                    </ul>
+					<div class="detail">
+						<div id="content41" class="active">
+							<div id="juan">
+								<!-- 1 -->
+								<div>
+									<ul>
+										<li>
+											<div>
+												<p>
+													<span>¥ </span> 35.00
+												</p>
+												<span>
+													全店通用
+												</span>
+											</div>	
+										</li>
+										<li>使用条件:满75.00</li>
+										<li>使用期限:2017.08.13 至 2018.01.13</li>
+										<li>发行店铺:妖精商城</li>
+									</ul>
+								</div>
+								<!-- 2 -->
+								<div>
+									<ul>
+										<li>
+											<div>
+												<p>
+													<span>¥ </span> 50.00
+												</p>
+												<span>
+													全店通用
+												</span>
+											</div>	
+										</li>
+										<li>使用条件:满500.00</li>
+										<li>使用期限:2017.09.13 至 2018.04.21</li>
+										<li>发行店铺:妖精商城</li>
+									</ul>
+								</div>
+								
+							</div>
+							
+						</div>
+						<div id="content42">
+							<table>
+								<thead>
+									<tr>
+										<th>红包名称/来源</th>
+										<th>初始金额</th>
+										<th>有效期</th>
+										<th>使用规则</th>
+										<th>状态</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody id="tbody5">
+									<tr>
+										<td>双11红包</td>
+										<td>¥ 10.00</td>
+										<td>
+											<p>2017.11.11 00.00.00 开始</p>
+											<p>2017.11.12 00.00.00 失效</p>
+										</td>
+										<td>仅双11当天</td>
+										<td>未使用</td>
+										<td>
+											<a href="#">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td>店铺红包</td>
+										<td>¥ 1.00</td>
+										<td>
+											<p>2017.11.11 00.00.00 开始</p>
+											<p>2017.11.12 00.00.00 失效</p>
+										</td>
+										<td>仅双11当天</td>
+										<td>已失效</td>
+										<td>
+											<a href="#">删除</a>
+										</td>
+									</tr>
+								</tbody>
+							
+							</table>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+
+    </div>
+	<!-- 弹框 -->
+	<div id="jumpbox">
+		<div id="jump">
+			<div>消息提示:</div>
+			<div id="msg">修改失败</div>
+			<button id="yes">确定</button>
+		</div>
+	</div>
+	<!-- 地址更新 -->
+	<div id="jumpbox1">
+		<div id="jump1">
+			<div>更新地址</div>
+			<ul>
+				<li id="china1">
+					<label>所在地区：</label>
+					<select class="province cxselect" data-value="陕西省" data-first-title="选择省" disabled="disabled"></select>
+					<select class="city cxselect" data-value="西安市" data-first-title="选择市" disabled="disabled"></select>
+					<select class="area cxselect" data-value="碑林区" data-first-title="选择地区" disabled="disabled"></select>
+				</li>
+				<li>
+					<label>详细地址：</label>
+					<textarea name="address_detail1" class="address_detail">长安街3号高速大厦</textarea>
+				</li>
+				<li>
+					<label>邮政编码：</label>
+					<input id="postcode1" type="text"  value="711777">
+				</li>
+				<li>
+					<label>收 货 人：</label>
+					<input id="receiver1" type="text"  value="张欢">
+				</li>
+				<li>
+					<label>联系方式：</label>
+					<input id="cellphone1" type="text"  value="13474008730">
+				</li>
+				<li class="default">
+					<label>	
+						<input type="checkbox">
+					</label>
+					<span>
+						设为默认地址	
+					</span>
+				</li>
+			</ul>
+			<div>
+				<button id="yes1">确定</button>
+				<button id="no1">取消</button>
+			</div>
+		</div>
+	</div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/myadmin.js"></script>
+    <script src="js/footer.js"></script>
+	<script src="js/jquery.cxselect.min.js"></script>
+</body>
+</html>

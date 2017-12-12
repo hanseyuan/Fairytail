@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+	<link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <div class="main">
+        <!--1、页面头部-->
+        <header id="header">
+            <img src="img/loading.gif" alt="加载中..." >
+        </header>
+        <!--2 主体-->
+            <!--1面包屑导航 ：#bread-crumb-->
+            <ul id="bread-crumb">
+                <li><a href="#">手机</a><span>&gt;</span></li>
+                <li><a href="#">手机通讯</a><span>&gt;</span></li>
+                <li><a href="#">三星(SAMSUNG)</a><span>&gt;</span></li>
+                <li><a href="#">三星(SAMSUNG) Galaxy</a></li>
+            </ul>
+            <!--2商品主要介绍-->
+            <div id="product-details">
+                <!--1左边 图片-->
+                    <div id="preview">
+                        <!--上 中图-->
+                        <div id="mediumDiv">
+                            <img id="mImg" src="img/loading.gif">
+                            <!--区域框,选定区域-->
+                            <div id="mask"></div>
+                            <!--选择框浮动区域-->
+                            <div id="superMask"></div>
+                        </div>
+                        <!--大图位置-->
+                        <div id="largeDiv"></div>
+                        <!--下 小图-->
+                        <div id="smallDiv">
+                            <!--左右切换按钮-->
+                            <a class="backward disabled"></a>
+                            <a class="forward"></a>
+                            <!--下图-->
+                            <ul id="icon_list">
+                                <img src="img/loading.gif" alt="加载中..." >
+                                <!-- <li class="i1">
+                                    <img src="${pic.sm}" data-md="${pic.md}" data-lg="${pic.lg}">
+                                 </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                <!--2右边 信息-->
+                <div id="show-details">
+                    <!--1.title 主标题-->
+                    <div class="title">
+                        <h1>三星(SAMSUNG) Galaxy S8(G9500) 全网通 手机 雾屿蓝 4G手机</h1>
+                        <!--2 subtitle 副标题-->
+                        <h3>【加5元，赠bong智能手环+bong智能体脂秤+捷波朗蓝牙耳机 】三星S8+！虹膜识别，全视曲面屏，骁龙835处理器</h3>
+                    </div>
+                    <!--3价格-->
+                    <div class="price">
+                        <div class="now-price">
+                            <b>售&nbsp;&nbsp;&nbsp;&nbsp;价</b>
+                            <span>¥5688.00</span>
+                            <a href="#">降价通知</a>
+                        </div>
+                        <!--促销promotion-->
+                        <div class="promotion">
+                            <b>促&nbsp;&nbsp;&nbsp;&nbsp;销</b>
+                            <span>加价换购</span>
+                            <span class="coupon">满5600元另加5元，即可在购物车换购bong智能手环+bong智能体脂秤+捷波朗蓝牙耳机</span>
+                        </div>
+                    </div>
+                    <!--4特色-->
+                    <div class="feature">
+                        <b>特&nbsp;&nbsp;&nbsp;&nbsp;色</b>
+                        <span></span>
+                        <a href="#">以旧换新再送好礼</a>
+                        <span></span>
+                        <a href="#">管家服务</a>
+                        <span></span>
+                        <a href="#">妖精智能</a>
+                    </div>
+                    <!--5 配送-->
+                    <div class="send">
+                        <b>配&nbsp;&nbsp;&nbsp;&nbsp;送</b>
+                        <span>
+                            <a href="#">免运费</a>
+                        </span>
+                    </div>
+                    <!--6 服务-->
+                    <div class="service">
+                        <b>服&nbsp;&nbsp;&nbsp;&nbsp;务</b>
+                        <span>
+                            由<span>妖精</span>配送并提供保障监管
+                        </span>
+                    </div>
+                    <!--7 版本-->
+                    <div class="RAM">
+                        <b>版&nbsp;&nbsp;&nbsp;&nbsp;本</b>
+						<div id="RAM">
+							<!-- <a href="#" class="select">S8</a>
+							<a href="#">S8 Plus</a> -->
+						</div>
+                    </div>
+                    <!--8 机身内存-->
+                    <div class="ROM">
+                        <b>机身内存</b>
+						<div id="ROM">
+							<!-- <a href="#" class="select">64G</a>
+							<a href="#">128G</a> -->
+						</div>
+                    </div>
+                    <!--9颜色-->
+                    <div class="color">
+                        <b>颜&nbsp;&nbsp;&nbsp;&nbsp;色</b>
+						<div id="color">
+							<a href="#">
+								<img src="img/product/sm/GalaxyS8(G9500)1.jpg" alt=""/>谜夜黑
+							</a>
+							<a href="#">
+								<img src="img/product/sm/GalaxyS8(G9500)1.jpg" alt=""/>颜晶灰
+							</a>
+						</div>
+                    </div>
+                    <!--10延保服务-->
+                    <div class="protection">
+                        <b>延保服务</b>
+                        <a>
+							<img src="img/product/protection1.png" alt="">
+							延长保修1年 ¥219
+						</a>
+                        <a>
+							<img src="img/product/protection2.png" alt="">
+							碎屏套装1年 ¥380
+						</a>
+                    </div>
+                    <!--11数量-->
+                    <p class="account">
+                        <b>数&nbsp;&nbsp;&nbsp;&nbsp;量：</b>
+                        <button class="number-reduce">-</button>
+                        <input type="text" value="1">
+                        <button class="number-add">+</button>
+                    </p>
+                    <!-- 12购买部分 -->
+                    <div class="shops">
+                        <a href="#" class="buy">立即购买</a>
+                        <a href="#" class="cart">
+                            <img src="img/product/cart.png" alt="">
+                            加入购物车
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!--2.1为你推荐-->
+            <div id="recommend" >
+                <div>
+					<img src="img/product/recommend.png" alt=""/>为你推荐
+				</div>
+				<div id="scroll">
+					<ul id="recommend_product" style="left: -240px;">
+						<li>
+							<a href="#">
+								<img src="img/product/md/HUAWEIMate10(ALP-AL00)black1.jpg">
+								<p>三星(SAMSUNG) Galaxy S8(G9500) 全网通 手机 雾屿蓝 4G手机</p>
+							</a>
+						</li>
+						<!-- <li>
+							<a href="${p.href}">
+								<img src="${p.pic}">
+								<p>${p.title}</p>
+							</a>
+						</li> -->
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+            </div>
+
+
+            <!--3详情--------------------------------------->
+            <div id="item-info">
+                
+                <!--1、左侧-->
+                <div id="sellmsg">
+                    <p class="store msg_title" ><a href="#"><span>三星</span>官方旗舰店</a><img src="img/product/kefu.png" alt=""></p>
+                    <p  class="store_pic"><img src="img/product/SAMSUNG.jpg" alt=""/></p>
+					<p class="msg_title">相关分类</p>
+					<ul class="sort">
+						<li><a href="#">合约机</a></li>
+						<li><a href="#">手机服务</a></li>
+						<li><a href="#">对讲机</a></li>
+						<li><a href="#">手机</a></li>
+						<li><a href="#">二手手机</a></li>
+					</ul>
+					<p class="msg_title">同类其他品牌</p>
+					<ul class="sort">
+						<li><a href="#">Apple</a></li>
+						<li><a href="#">三星</a></li>
+						<li><a href="#">华为</a></li>
+						<li><a href="#">小米(MI)</a></li>
+						<li><a href="#">索尼(SONY)</a></li>
+						<li><a href="#">摩托罗拉</a></li>
+						<li><a href="#">联想(Lenovo)</a></li>
+						<li><a href="#">诺基亚</a></li>
+						<li><a href="#">HTC</a></li>
+						<li><a href="#">中兴(ZTE)</a></li>
+						<li><a href="#">酷派</a></li>
+						<li><a href="#">金立</a></li>
+						<li><a href="#">华为</a></li>
+						<li><a href="#">努比亚</a></li>
+						<li><a href="#">步步高</a></li>
+						<li><a href="#">OPPO</a></li>
+						<li><a href="#">魅族</a></li>
+						<li><a href="#">一加</a></li>
+					</ul>
+					<p class="msg_title">热销排行榜</p>
+                </div>
+				<!--1、右侧：商品详情，商品评价(1000px)-->
+                <div id="details">
+                    <!-- 1、页签 -->
+					<div class="tab">
+						<ul class="tab-left">
+							<li class="active" id="d1">
+								<a class="active1">商品详情</a>
+							</li>
+							<li  id="d2">
+								<a>规格包装</a>
+							</li>
+							<li  id="d3">
+								<a>售后保障</a>
+							</li>
+                            <li  id="d4">
+                                <a>商品评价</a>
+                            </li>
+                        </ul>
+						<ul class="tab-right">
+							<li>
+								<a href="#"><img src="img/product/phonema.png" alt="">手机下单</a>
+							</li>
+							<li>
+								<a href="#"><img src="img/product/kefu.png" alt="">联系供应商</a>
+							</li>
+							<li>
+								<a href="#" id="nextAddCart">加入购物车</a>
+							</li>
+						</ul>
+					</div>
+                    <!--2、规格参数-->
+                    <div id="param">
+                        <h2> 规格参数 </h2>
+                        <ul>
+                            <li>
+                                <a href="#">商品名称：<span>三星Galaxy S8</span></a>
+                            </li>
+                            <li>
+                                <a href="#">商品型号：<span>G9550</span></a>
+                            </li>
+                            <li>
+                                <a href="#">品牌： <span>三星（SAMSUNG）</span></a>
+                            </li>
+                            <li>
+                                <a href="#">屏幕尺寸：<span>G9500:5.6英寸</span></a>
+                            </li>
+                            <li>
+                                <a href="#">颜色： <span>雾屿蓝</span></a>
+                            </li>
+                            <li>
+                                <a href="#">商品产地：<span>中国大陆</span></a>
+                            </li>
+                            <li>
+                                <a href="#">系统：<span>安卓（Android）</span></a>
+                            </li>
+                            <li>
+                                <a href="#">前置摄像头像素：<span>800万-1599万</span></a>
+                            </li>
+                            <li>
+                                <a href="#">热点：<span>骁龙芯片，双卡双待</span></a>
+                            </li>
+                            <li>
+                                <a href="#">后置摄像头像素：<span>1200万-1999万</span></a>
+                            </li>
+                            <li>
+                                <a href="#">电池容量：<span>3000mAh-3999mAh</span></a>
+                            </li>
+                            <li>
+                                <a href="#">机身内存：<span>64GB</span></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--3商品介绍-->
+                    <div id="introduce">
+                        <h2>
+                            商品介绍
+                        </h2>
+						<div>
+							<!-- <img src="img/product/detail/GalaxyS8(0).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(1).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(2).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(3).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(4).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(5).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(6).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(7).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(8).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(9).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(10).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(11).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(12).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(13).jpeg"> -->
+							<!-- <img src="img/product/detail/GalaxyS8(14).jpeg"> -->
+						</div>
+                        
+                    </div>
+                    <!--规格包装-->
+                    <div id="package">
+                        <div>
+                            <h3>主体</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>品牌</td>
+                                        <td>OPPO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>型号</td>
+                                        <td>A59s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>入网型号</td>
+                                        <td>A59s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>入网年份</td>
+                                        <td>2016年</td>
+                                    </tr>
+                                    <tr>
+                                        <td>上市月份</td>
+                                        <td>12月</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                        <h3>基本信息</h3>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>颜色</td>
+                                <td>金色</td>
+                            </tr>
+                            <tr>
+                                <td>机身长度(mm)</td>
+                                <td>154.5</td>
+                            </tr>
+                            <tr>
+                                <td>机身宽度(mm)</td>
+                                <td>76</td>
+                            </tr>
+                            <tr>
+                                <td>机身厚度(mm)</td>
+                                <td>7.38</td>
+                            </tr>
+                            <tr>
+                                <td>机身重量(g)</td>
+                                <td>约160</td>
+                            </tr>
+                            <tr>
+                                <td>运营商标志</td>
+                                <td>无</td>
+                            </tr>
+                            <tr>
+                                <td>机身材质</td>
+                                <td>其他</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        <div>
+                            <h3>操作系统</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>操作系统</td>
+                                        <td>Android</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>主芯片</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>CPU品牌</td>
+                                        <td>联发科（MTK）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU频率</td>
+                                        <td> 1.5GHz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU核数</td>
+                                        <td>八核</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CPU型号</td>
+                                        <td>mt6750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3> 网络支持</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>双卡机类型</td>
+                                        <td>双卡双待单通</td>
+                                    </tr>
+                                    <tr>
+                                        <td>最大支持SIM卡数量</td>
+                                        <td>2个</td>
+                                    </tr>
+                                    <tr>
+                                        <td> SIM卡类型</td>
+                                        <td>Nano SIM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4G网络</td>
+                                        <td>4G：移动（TD-LTE)；4G：联通(FDD-LTE)；4G：电信(FDD-LTE)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3G/2G网络</td>
+                                        <td>3G：移动(TD-SCDMA)；3G：联通(WCDMA)；3G：电信(CDMA2000)；2G：移动（GSM）+联通(GSM)；2G：电信(CDMA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>副SIM卡类型</td>
+                                        <td>Nano SIM；副SIM卡与存储卡二选一</td>
+                                    </tr>
+                                    <tr>
+                                        <td>副SIM卡4G网络</td>
+                                        <td>不支持主副卡同时使用电信卡</td>
+                                    </tr>
+                                    <tr>
+                                        <td>副SIM卡3G/2G网络</td>
+                                        <td>不支持主副卡同时使用电信卡</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4G+（CA）</td>
+                                        <td>移动4G+</td>
+                                    </tr>
+                                    <tr>
+                                        <td>网络频率（2G/3G）</td>
+                                        <td>2G：GSM 850/900/1800/1900</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>存储</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>ROM</td>
+                                        <td>32GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RAM</td>
+                                        <td>4GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>存储卡</td>
+                                        <td>支持MicroSD（TF）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>最大存储扩展容量</td>
+                                        <td>128GB</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>屏幕</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>主屏幕尺寸（英寸）</td>
+                                        <td>5.5英寸</td>
+                                    </tr>
+                                    <tr>
+                                        <td>分辨率</td>
+                                        <td>1280×720（HD）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>屏幕材质类型</td>
+                                        <td>IPS</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3> 前置摄像头</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>前置摄像头</td>
+                                        <td> 1600万像素</td>
+                                    </tr>
+                                    <tr>
+                                        <td>前摄光圈大小</td>
+                                        <td>f/2.0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>后置摄像头</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>摄像头数量</td>
+                                        <td>1个</td>
+                                    </tr>
+                                    <tr>
+                                        <td>后置摄像头</td>
+                                        <td>1300万像素</td>
+                                    </tr>
+                                    <tr>
+                                        <td>摄像头光圈大小</td>
+                                        <td>f/2.2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>电池信息</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>电池容量（mAh）</td>
+                                        <td>3075mAh（典型值）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>电池是否可拆卸</td>
+                                        <td>否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>充电器</td>
+                                        <td>5V/2A</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>数据接口</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>数据传输接口</td>
+                                        <td>蓝牙；WiFi热点</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NFC/NFC模式</td>
+                                        <td>不支持</td>
+                                    </tr>
+                                    <tr>
+                                        <td>耳机接口类型</td>
+                                        <td>3.5mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>充电接口类型</td>
+                                        <td>Micro USB</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>手机特性</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>指纹识别</td>
+                                        <td>支持</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPS</td>
+                                        <td>支持</td>
+                                    </tr>
+                                    <tr>
+                                        <td>电子罗盘</td>
+                                        <td>支持</td>
+                                    </tr>
+                                    <tr>
+                                        <td>陀螺仪</td>
+                                        <td>不支持</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3> 辅助功能</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>常用功能</td>
+                                        <td>录音；便签</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <span>包装清单</span>
+                            <sapn>主机x1、耳机x1、数据线x1、充电器x1、SIM卡通针x1、保护套x1、产品信息手册及保修卡x1</sapn>
+                        </div>
+                    </div>
+                    <!--4售后保障-->
+                    <div id="protect">
+                        <h2>售后保障</h2>
+                        <ul>
+                            <!--1售后内容-->
+                            <li>
+                                <p>售后内容</p>
+                                <p>
+                                    <span>
+                                        <img src="img/product/aftersale.png" alt=""/>
+                                    </span>
+                                    <span>本产品全国联保，享受三包服务，质保期为：一年质保 如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！ (注:如厂家在商品介绍中有售后保障的说明,则此商品按照厂家说明执行售后保障服务。) 您可以查询本品牌在各地售后服务中心的联系方式。 品牌官方网站：http://www.samsung.com/cn/support/ 售后服务电话：400-810-5858</span>
+                                </p>
+                            </li>
+                            <!--2售后承诺-->
+                            <li >
+                                <p>售后承诺</p>
+                                <ul id="promise">
+                                    <li>
+                                        <h6><img src="img/product/zheng.png" alt=""/>正品行货</h6>
+                                        <p>国美向您保证所售商品均为正品行货；国美自营商品开具普通发票或电子发票（详情请见发票制度） 。</p>
+                                    </li>
+                                    <li>
+                                        <h6><img src="img/product/bao.png" alt=""/>全国联保</h6>
+                                        <p>
+                                            凭质保证书及国美发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。国美还为您提供具有竞争力的商品价格 运费政策，请您放心购买
+                                        </p>
+                                        <p>
+                                            温馨提示：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若国美没有及时更新，请大家谅解！
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h6><img src="img/product/tui.png" alt=""/>无忧退换货</h6>
+                                        <p>
+                                            用户购买国美自营商品，在保证商品完好的前提下，7日内可无理由退货(含7日，自您收到商品次日0点起计算)，15日内可换货。(部分商品除外，详情请见退换货政策-自营）
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--3售后服务-->
+                            <li>
+                               <p>售后服务</p>
+                                <ul class="sell-service">
+                                    <li><img src="img/product/hu.png">家安保 (延长保修 碎屏保修 意外保修)</li>
+                                    <li><img src="img/product/xiu.png">专业维修</li>
+                                    <li><img src="img/product/huishou.png">家电回收</li>
+                                    <li><img src="img/product/xi.png">家电清洗</li>
+                                    <li><img src="img/product/zhuang.png">上门安装</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--商品评价-->
+                    <div id="assess">
+                        <h2>商品评价</h2>
+                        <ul id="assess-top">
+                            <li>
+                                <p><span>100</span><span>％</span></p>
+                                <p>好评度</p>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <span>好评 </span><span> (100%) </span> <span></span>
+                                    </li>
+                                    <li>
+                                        <span>中评 </span><span> ( 0% ) </span> <span></span>
+                                    </li>
+                                    <li>
+                                        <span>差评 </span><span> ( 0% ) </span> <span></span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="impression">
+                               <p>
+                                   买家印象
+                               </p>
+                                <ul>
+                                    <li>就是快(960)</li>
+                                    <li>像素不错(2452)</li>
+                                    <li>实惠(500)</li>
+                                    <li>支持国产(1052)</li>
+                                    <li>很流畅(5353)</li>
+                                    <li>漂亮(900)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul id="assess-title">
+                            <li>全部评论(5632)</li>
+                            <li>晒图(53)</li>
+                            <li>好评(5455)</li>
+                            <li>中评(200)</li>
+                            <li>差评( 0 )</li>
+                        </ul>
+                        <ul id="assess-content">
+                            <li>
+                                <div>
+                                    <img src="img/avatar/default.png" />
+                                    <span>lis**nn</span>
+                                    <p>淘气值:200</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/>
+                                    </p>
+                                    <div>
+                                        <p>总的来说对得起这个价格，华为的确是国产引领者，摄像头徕卡的性能强劲，指纹模组外观喷涂与玻璃稍微有点色差，体验上目前国内最好的全面屏手机，还有很多功能我还没有开发试用，相信会有惊喜。</p>
+                                    </div>
+                                    <div id="assess_pic">
+                                        <img src="img/product/md/OPPOA59s1.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s2.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s3.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s4.jpg" alt=""/>
+                                    </div>
+                                    <div id="assess-bottom">
+                                        <ul>
+                                            <li>金色</li>
+                                            <li>全网通</li>
+                                            <li>2017-12-25 12:23</li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#">举报</a></li>
+                                            <li><a href="#"><img src="img/product/zan.png"/>123</a></li>
+                                            <li><a href="#"><img src="img/product/ping.png"/>123</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/avatar/default.png" />
+                                    <span>lis**nn</span>
+                                    <p>淘气值:200</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/>
+                                    </p>
+                                    <div>
+                                        <p>总的来说对得起这个价格，华为的确是国产引领者，摄像头徕卡的性能强劲，指纹模组外观喷涂与玻璃稍微有点色差，体验上目前国内最好的全面屏手机，还有很多功能我还没有开发试用，相信会有惊喜。</p>
+                                    </div>
+                                    <div id="assess_pic">
+                                        <img src="img/product/md/OPPOA59s1.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s2.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s3.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s4.jpg" alt=""/>
+                                    </div>
+                                    <div id="assess-bottom">
+                                        <ul>
+                                            <li>金色</li>
+                                            <li>全网通</li>
+                                            <li>2017-12-25 12:23</li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#">举报</a></li>
+                                            <li><a href="#"><img src="img/product/zan.png"/>123</a></li>
+                                            <li><a href="#"><img src="img/product/ping.png"/>123</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/avatar/default.png" />
+                                    <span>lis**nn</span>
+                                    <p>淘气值:200</p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/><img src="img/product/star.png"/>
+                                    </p>
+                                    <div>
+                                        <p>总的来说对得起这个价格，华为的确是国产引领者，摄像头徕卡的性能强劲，指纹模组外观喷涂与玻璃稍微有点色差，体验上目前国内最好的全面屏手机，还有很多功能我还没有开发试用，相信会有惊喜。</p>
+                                    </div>
+                                    <div id="assess_pic">
+                                        <img src="img/product/md/OPPOA59s1.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s2.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s3.jpg" alt=""/>
+                                        <img src="img/product/md/OPPOA59s4.jpg" alt=""/>
+                                    </div>
+                                    <div id="assess-bottom">
+                                        <ul>
+                                            <li>金色</li>
+                                            <li>全网通</li>
+                                            <li>2017-12-25 12:23</li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#">举报</a></li>
+                                            <li><a href="#"><img src="img/product/zan.png"/>123</a></li>
+                                            <li><a href="#"><img src="img/product/ping.png"/>123</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+			<!-- 返回顶部 -->
+			<div id="goTop">
+				<div class="top">
+					<img src="img/product/top.png">
+				</div>
+				<div>
+					<p>返回顶部</p>
+				</div>
+			</div>
+        <!--3 页面底部-->
+        <footer id="footer">
+            <img src="img/loading.gif" class="loading">
+        </footer>
+    </div>
+	<!-- 弹框 -->
+	<div id="jumpbox">
+		<div id="jump">
+			<div>消息提示:</div>
+			<div id="msg">修改失败</div>
+			<button id="yes">确定</button>
+			<button id="no">取消</button>
+		</div>
+	</div>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/product_details.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

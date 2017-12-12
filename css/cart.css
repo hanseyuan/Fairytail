@@ -1,0 +1,350 @@
+* {
+    margin: 0 auto;
+}
+#header>div>span:last-child{
+	font-size:23px;
+	position:relative;
+	top:0px;
+	left:-13px;
+}
+
+#cartTable{
+    margin-top:30px;
+}
+table{
+    border-collapse: collapse; /*为表格设置合并边框模型*/
+    border-spacing:0; /*相邻单元格的边框间的距离*/
+    border: 1px;
+    text-align: center;
+    width: 990px;
+    font-family: Arial, 新宋体;
+    color: rgb(51, 51, 51);
+}
+th{
+    height: 38px;
+    line-height: 38px;
+    background: #f3f3f3;
+    font-weight: normal;
+}
+th:first-child{
+    width: 100px;
+    cursor: pointer;
+}
+th:first-child>label>input{
+    position: relative;
+    top: 2px;
+}
+th:nth-child(2){
+    width: 420px;
+}
+th:nth-child(3){
+    width: 125px;
+}
+th:nth-child(4){
+    width: 110px;
+}
+th:nth-child(5){
+    width: 155px;;
+}
+th:nth-child(6){
+    width: 80px;;
+}
+
+tbody>tr{
+    height: 125px;
+    background: #fff;
+    border: 1px solid #E6E6E6;
+}
+tbody tr:hover{
+    background: RGB(238,246,255);
+}
+.on{
+    background: RGB(238,246,255);
+}
+td.checkbox{
+    width: 100px;
+}
+td.goods{
+    width: 420px;
+    height: 125px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 20px 10px;
+    text-align: left;
+}
+td.goods>a{
+    display:block;
+    width:190px;
+    padding: 20px 20px;
+}
+td.goods>img{
+    height: 80px;
+    width:80px;
+    border: 1px solid #E6E6E6;
+}
+td.goods>a{
+    color: #333;
+}
+td.goods>a:hover{
+    color:#e3101e;
+}
+td.goods>ul{
+    width:90px;
+    padding: 20px 0px;
+    color: #888;
+}
+td.price{
+    width: 125px;
+}
+
+td.count{
+    width:110px;
+    box-sizing: border-box;
+    padding-left: 15px;;
+}
+.reduce,.count input,.add{
+    float: left;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    color: #343434;
+    margin-right: -1px;
+    position: relative;
+    z-index: 0;
+	outline:none;
+}
+.reduce,.add{
+    width: 20px;
+    height: 20px;
+	cursor: pointer;
+
+}
+.count input{
+    width: 40px;
+    height: 18px;
+    z-index: 2;
+}
+
+
+td.subtotal{
+    width: 155px;
+    font-weight: 700;
+}
+td:nth-child(6){
+    width: 80px;;
+}
+
+
+/* 底结算*/
+
+
+div.tfoot{
+    width: 990px;
+    height: 60px;
+    margin-top: 30px;
+    background: #f3f3f3;
+    position: relative;
+    z-index: 8;
+    display: flex;
+    margin-bottom:50px;
+
+}
+.tfoot div, .tfoot a,.tfoot label{
+    line-height:58px;
+    height: 58px;
+    margin: 0px;
+    font-family: Arial, 新宋体;
+    color: rgb(51, 51, 51);
+}
+label.select_all {
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+label.select_all>input{
+    position: relative;
+    top: 2px;
+}
+
+.delete{
+    width: 100px;
+    padding-left: 10px;
+	cursor: pointer;
+}
+.delete:hover{
+    color:#e3101e;
+}
+div.selected{
+    width: 200px;
+    margin-left: 300px;
+    cursor: pointer;
+}
+div.total{
+    width: 220px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#selectedTotal ,#priceTotal{
+    font-size: 18px;
+    font-weight: 900;
+    color: #e3101e;
+    padding: 0 5px;
+}
+.selected .arrow {
+    position: relative;
+}
+.selected .down {
+    top:1px;
+    left: 5px;
+    display: inline;
+}
+.selected .up {
+    top:1px;
+    left: -11px;
+    display: none;
+}
+.selected:hover .arrow {
+    color: red;
+}
+
+a.closing{
+    border: 1px  solid red;
+    width: 140px;
+    background: #e3101e;
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.selected-view {
+    width: 990px;
+    border: 1px solid #c8c8c8;
+    position: absolute;
+    min-height: 120px;;
+    background: rgba(51, 51, 51,0.3);;
+    z-index: 9;
+    bottom: 60px;
+    left: -1px;
+    display:none;
+}
+
+.show .selected-view {
+    display: block;
+}
+
+.selected-view div{
+    height: auto;
+}
+/*定位点*/
+.selected-view .arrow {
+    font-size: 16px;
+    line-height: 100%;
+    color: #f3f3f3;
+    position: absolute;
+    right: 450px;
+    bottom:-10px;
+}
+.selected-view .arrow span {
+    color: #ffffff;
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+}
+#selectedViewList {
+    padding: 0 20px;
+    margin-bottom: -20px;
+}
+
+#selectedViewList div{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    background: #ffffff;
+}
+#selectedViewList img{
+    width: 80px;
+    margin: 10px;
+    height: 80px;
+}
+#selectedViewList div span {
+    display: none;
+    color: #ffffff;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background: RGBA(0,0,0,.5);
+    cursor: pointer;
+}
+#selectedViewList div:hover span {
+    display: block;
+}
+
+
+
+
+
+
+/*为你推荐*/
+#recommend{
+    width:990px;
+    height:300px;
+    box-sizing:border-box;
+    margin:20px auto 40px;
+    /*border:1px solid red;*/
+}
+#recommend>p{
+    height:30px;
+    line-height:30px;
+    font-size:18px;
+}
+
+#recommend>ul{
+	width:990px;
+    /*border:1px solid #ccc;*/
+    display:flex;
+	justify-content:space-between;
+	padding:0px;
+}
+#recommend>ul>li{
+    width:210px;
+    text-align:center;
+    height:230px;
+    padding:15px 0px 25px;
+    border:1px solid #fff;
+}
+#recommend>ul>li:hover{
+    border:1px solid #ccc;
+}
+#recommend>ul>li>a:first-child{
+    height:205px;
+}
+#recommend>ul>li>a>img:first-child{
+    width:30px;
+    float:right;
+    z-index:50;
+}
+#recommend>ul>li>a>img:last-child{
+    width:180px;
+    margin-bottom:10px;
+    position:relative;
+    top:-17px;
+    z-index:-1;
+}
+#recommend>ul>li a{
+    display:block;
+    margin:5px 10px;
+    color: #5e5e5e;
+}
+#recommend>ul>li a:hover{
+    color:#e3101e;
+}

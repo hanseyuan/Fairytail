@@ -1,0 +1,28 @@
+body{
+    font:12px "simhei",Arial,Helvetica,sans-serif;
+    color:#888;
+    margin:0 auto;
+    padding:0;
+    background-color:#fff;
+	width:1200px;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    color:#888;
+    text-decoration:none;
+}
+a:hover{
+     color:#f5004b;
+ }
+img{
+    vertical-align:middle;
+}
+
+div.main{
+    width:1200px;
+    margin:0 auto;
+}
